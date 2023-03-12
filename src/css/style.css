@@ -13,6 +13,20 @@
     margin: 0 auto;
 }
 
+.icon-cancel{
+    display: none;
+}
+.container:hover .bayan__list-title{
+    color: black;
+    cursor: pointer;
+}
+
+.container:hover .icon-cancel{
+    display: block;
+    transform:rotate(-45deg);
+    
+}
+
 .bayan{
     padding: 50px 0;
 
@@ -31,9 +45,9 @@
 }
 
 .bayan__list-item{
-    border-bottom: 2px solid grey;
-   
+    border-bottom: 2px solid #42424280;  
 }
+
 
 .bayan__list-item-row{
     display: flex;
@@ -57,4 +71,18 @@
 }
 .bayan__list-img{
     max-width: 40%;
+}
+
+.bayan__block-img{
+    display: flex;
+    justify-content: center;
+    max-height: 0;
+}
+.bayan__list-item:hover .bayan__block-img{
+    max-height: 400px; 
+    margin-bottom: 20px;
+    
+}
+.bayan__list-item:hover .icon-cancel{
+    transform: rotate(0);
 }
