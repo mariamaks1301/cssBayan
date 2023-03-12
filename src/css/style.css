@@ -5,17 +5,22 @@
     transition: .4s all linear;
     list-style-type: none;
 }
+html{
+    font-size: 16px;
+}
 
 .container{
-    max-width: 1960px;
+    max-width: 1920px;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 50px;
     margin: 0 auto;
 }
 
-.icon-cancel{
+.icon-cancel{  
+    cursor: pointer;
     display: none;
 }
+
 .container:hover .bayan__list-title{
     color: black;
     cursor: pointer;
@@ -23,8 +28,7 @@
 
 .container:hover .icon-cancel{
     display: block;
-    transform:rotate(-45deg);
-    
+    transform:rotate(-45deg);  
 }
 
 .bayan{
@@ -32,20 +36,14 @@
 
 }
 .bayan__title{
-    font-size: 40px;
+    font-size: 3.125rem;
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 20px;
    
 }
-.bayan__list{
-    display: flex;
-    flex-direction: column;
-
-}
-
 .bayan__list-item{
-    border-bottom: 2px solid #42424280;  
+    cursor: pointer;
 }
 
 
@@ -53,22 +51,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .bayan__list-item .bayan__list-img{
     display: flex;
-    justify-content: center;
-    
+    justify-content: center;   
 }
 
 .bayan__list-title{
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: 600;
     line-height: 1.2;
     color: blue;
-    padding: 20px 0;
+    padding: 1.25rem 0;
 }
+
 .bayan__list-img{
     max-width: 40%;
 }
@@ -77,12 +74,47 @@
     display: flex;
     justify-content: center;
     max-height: 0;
+    margin-bottom: 1.25rem;
 }
+.bayan__block-img:default{
+    max-height: 25rem;
+}
+
 .bayan__list-item:hover .bayan__block-img{
-    max-height: 400px; 
-    margin-bottom: 20px;
-    
+    max-height: 25rem;  
 }
+
 .bayan__list-item:hover .icon-cancel{
     transform: rotate(0);
+}
+
+.bayan__list-item:nth-child() .bayan__block-img{
+    max-height: 25rem;
+}  
+
+
+@media (max-width: 821px) {
+  html{
+    font-size: 14px;
+  }
+  .bayan__list-img{
+    max-width: 60%;
+}
+    
+}
+
+@media (max-width: 321px) {
+    html{
+        font-size: 10px;
+    }
+    .container{
+        padding: 0 2rem;
+    }
+    .bayan__title{
+        text-align: center;
+    }
+    .bayan__list-title{
+        padding: 1rem 0;
+    }
+    
 }
