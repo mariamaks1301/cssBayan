@@ -1,1 +1,1 @@
-# https://mariamaks1301.github.io/cssBayan/cssBayan/index.html
+# https://mariamaks1301.github.io/cssBayan/index.html
